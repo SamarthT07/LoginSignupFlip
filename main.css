@@ -1,0 +1,288 @@
+:root {
+  --primary: #ffce00;
+  --secondary: #fe4880;
+  --dark: #212121;
+  --light: #f3f3f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: montserrat, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Poppins:wght@300;400&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.div {
+  margin-top: 100px;
+  display: inline-block;
+}
+
+/* Login Box  */
+.card {
+  margin: 150px auto 0;
+  width: 400px;
+  height: 600px;
+  perspective: 1000px;
+}
+
+.card__inner {
+  width: 100%;
+  height: 85%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card__inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--primary),
+    var(--secondary)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__face--front h2 {
+  color: rgb(0, 0, 0);
+  font-size: 52px;
+  font-family: "Open Sans", sans-serif;
+  position: absolute;
+  transform: translate(-120px, -110px);
+  text-shadow: 10px 6px 10px #ff7b00;
+}
+.card__face--front h2 span:nth-child(1) {
+  position: relative;
+  padding: 50px;
+  animation: one forwards 0.5s;
+}
+.card__face--front h2 span:nth-child(2) {
+  position: relative;
+  padding: 40px;
+  animation: two forwards 1s;
+}
+.card__face--front h2 span:nth-child(3) {
+  position: relative;
+  padding: 30px;
+  animation: three forwards 1.5s;
+}
+.card__face--front h2 span:nth-child(4) {
+  position: relative;
+  padding: 20px;
+  animation: four forwards 1.5s;
+}
+.card__face--front h2 span:nth-child(5) {
+  position: relative;
+  padding: 10px;
+  animation: five forwards 2s;
+}
+@keyframes one {
+  100% {
+    padding: 0px;
+  }
+}
+@keyframes two {
+  100% {
+    padding: 0px;
+  }
+}
+@keyframes three {
+  100% {
+    padding: 0px;
+  }
+}
+@keyframes four {
+  100% {
+    padding: 0px;
+  }
+}
+@keyframes five {
+  100% {
+    padding: 0px;
+  }
+}
+
+.card__face--back {
+  background: #fbfafb;
+  background-image: linear-gradient(131deg, #fbfafb 40%, #3399ed 100%);
+  transform: rotateY(180deg);
+}
+
+.card__content {
+  width: 100%;
+  height: 100%;
+}
+
+.card__header {
+  position: relative;
+  padding: 30px 30px 40px;
+}
+
+.card__header:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient( to bottom left, var(--primary) 10%, var(--secondary) 115% );
+  z-index: -1;
+  border-radius: 0px 0px 50% 0px;
+}
+
+.card__header h2 {
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card__body {
+  padding: 30px;
+}
+
+.card__body h3 {
+  color: var(--dark);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card__body p {
+  color: var(--dark);
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: -65px;
+}
+
+form input {
+  margin-bottom: 15px;
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  width: 140%;
+  padding: 10px 10px;
+  outline: none !important;
+  background: transparent;
+}
+
+form input::placeholder {
+  color: black;
+}
+
+button {
+  padding: 8px 8px;
+  width: 60%;
+  border: none;
+  border-radius: 10px;
+}
+
+.abb1 {
+  text-decoration: none;
+  color: black;
+  transform: translate(180px, 50px);
+  position: relative;
+  text-shadow: 10px 6px 10px #e02a1d;
+}
+.abb1 a {
+  text-decoration: none;
+  color: black;
+}
+
+/* signup */
+
+#signup {
+  /* margin-left: 50px; */
+  /* background: white; */
+  margin-top: 135px;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+#signup h2 {
+  color: rgb(3, 3, 3);
+  margin-top: 10px;
+  position: absolute;
+  transform: translate(170px, -200px);
+  font-size: 52px;
+  font-family: "Open Sans", sans-serif;
+  text-shadow: 10px 6px 10px #0d96e7;
+}
+#signup h2 span {
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+  padding: 0px;
+  margin: 0px;
+}
+
+#signup input {
+  width: 75%;
+  margin-bottom: 10px;
+}
+
+#signup button {
+  width: 60px;
+  margin-bottom: 6px;
+}
+
+.back {
+  transform: translate(-205px, 0px);
+}
+
+.back a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.movie video {
+  position: absolute;
+  transform: translate(-180px, -128px);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
